@@ -1,3 +1,16 @@
+<?php
+
+// iniciar o reanudar la sesción del usuario actual
+session_start();
+
+if (!isset($_SESSION['user_id'])){
+    //si no hay SESSION es pq no hay usuario
+    header("Location: user/login/");
+    exit();
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
@@ -285,7 +298,7 @@
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-outline-secondary">Profile</a>
-                  <a href="#" class="btn btn-outline-danger float-end">Sign out</a>
+                  <a href="../user/logout/" class="btn btn-outline-danger float-end">Cerrar sesión</a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>

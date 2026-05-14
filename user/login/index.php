@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_SESSION['user_id'])){
+    //el ususario ya está logueado
+    header("Location: ../../dashboard/");
+    exit(); //siempre que haya un redireccionamiento
+} 
+
+?>
+
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
@@ -74,9 +84,9 @@
         <div class="card-body login-card-body">
           <p class="login-box-msg">¡Hola! Ingrese sus crendenciales</p>
 
-          <form action="validate" method="post">
+          <form action="validate/" method="post">
             <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Ingrese su email" name="username" id="username" />
+              <input type="email" class="form-control" placeholder="Ingrese su email" name="username" />
               <div class="input-group-text">
                 <span class="bi bi-envelope"></span>
               </div>
