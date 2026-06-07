@@ -97,7 +97,7 @@ try {
           <p class="login-box-msg">¡Hola! Ingrese sus crendenciales</p>
           <?php if ($msgError != 0) { ?>
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>¡Error 1!</strong> <?php echo $msgError ?>
+            <strong>¡Error!</strong> <?php echo $msgError ?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
           <?php } ?>

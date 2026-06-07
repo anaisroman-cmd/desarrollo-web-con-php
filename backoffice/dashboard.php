@@ -1,0 +1,1 @@
+ingo del dashboard

@@ -18,7 +18,7 @@ if ($user === $formUsername && $pass === $formPassword){
     $_SESSION['user_id'] = 1;
     $_SESSION['user_name'] = 'Profe :)';
 
-    header("Location: ../../../dashboard/");
+    header("Location: ../../../backoffice/");
     exit();
 }
 
