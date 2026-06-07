@@ -22,4 +22,4 @@ if ($user === $formUsername && $pass === $formPassword){
     exit();
 }
 
-echo 'user y pass malos...';
+echo 'user y pass malos.....';
