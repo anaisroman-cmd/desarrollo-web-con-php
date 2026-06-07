@@ -22,4 +22,6 @@ if ($user === $formUsername && $pass === $formPassword){
     exit();
 }
 
-echo 'user y pass malos.....';
+$_SESSION['error'] = ['login' => 'Usuario o contraseña incorrectos'];
+
+header("Location: ../");

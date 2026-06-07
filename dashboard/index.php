@@ -1,5 +1,4 @@
 <?php
-
 // iniciar o reanudar la sesción del usuario actual
 session_start();
 
@@ -8,7 +7,6 @@ if (!isset($_SESSION['user_id'])){
     header("Location: user/login/");
     exit();
 }
-
 ?>
 
 <!doctype html>
@@ -1252,18 +1250,7 @@ if (!isset($_SESSION['user_id'])){
       </main>
       <!--end::App Main-->
       <!--begin::Footer-->
-      <footer class="app-footer">
-        <!--begin::To the end-->
-        <div class="float-end d-none d-sm-inline">Anything you want</div>
-        <!--end::To the end-->
-        <!--begin::Copyright-->
-        <strong>
-          Copyright &copy; 2014-2026&nbsp;
-          <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
-        </strong>
-        All rights reserved.
-        <!--end::Copyright-->
-      </footer>
+      
       <!--end::Footer-->
     </div>
     <!--end::App Wrapper-->
