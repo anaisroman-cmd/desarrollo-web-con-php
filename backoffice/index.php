@@ -7,6 +7,11 @@ if (!isset($_SESSION['user_id'])){
     header("Location: user/login/");
     exit();
 }
+
+$ruta = ['assets' => '../', 'components' => ''];
+$_SESSION['ruta'] = $ruta;
+$_SESSION['titulos'] = ['webTitle' => 'Programación Web en PHP con AdminLTE'];
+
 ?>
 
 <!doctype html>
@@ -14,8 +19,7 @@ if (!isset($_SESSION['user_id'])){
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Programación Web en PHP con AdminLTE</title>
-
+    <title><?php echo $_SESSION['titulos']['webTitle']?></title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
