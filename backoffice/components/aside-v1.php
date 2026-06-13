@@ -7,7 +7,8 @@ $project = ['url' => 'desarrollo-web-con-php'];
     <!--begin::Brand Link-->
     <a href="/<?php echo $project['url'] ?>/backoffice" class="brand-link">
       <!--begin::Brand Image-->
-      <img src="<?php echo $_SESSION['ruta']['assets'] ?>assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image opacity-75 shadow" />
+      <img src="<?php echo $_SESSION['ruta']['assets'] ?>assets/img/AdminLTELogo.png" alt="AdminLTE Logo"
+        class="brand-image opacity-75 shadow" />
       <!--end::Brand Image-->
       <!--begin::Brand Text-->
       <span class="brand-text fw-light">AdminLTE 4</span>
@@ -298,7 +299,7 @@ $project = ['url' => 'desarrollo-web-con-php'];
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/<?php echo $project['url'] ?>/backoffice/users" class="nav-link">
+              <a href="/<?php echo $project['url'] ?>/backoffice/users/" class="nav-link">
                 <i class="nav-icon bi bi-circle"></i>
                 <p>Usuarios </p>
               </a>
