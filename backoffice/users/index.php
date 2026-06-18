@@ -131,7 +131,7 @@ $data = $modelo->getAll();
                         <!--begin::Col-->
                         <div class="col-12">
                             <?php
-                            try {    
+                            try {
                                 if (count(@$_SESSION['errores']['items']) > 0) {
                                     if (@$_SESSION['errores']['items']['email']) { ?>
                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -174,14 +174,17 @@ $data = $modelo->getAll();
                                                 <th style="width: 40px" scope="col">Acciones</th>
                                             </tr>
                                         </thead>
-                                        <?php if (count($data) > 0) { $num = 1 ?>
+                                        <?php if (count($data) > 0) {
+                                            $num = 1 ?>
                                             <tbody>
                                                 <?php foreach ($data as $registro) { ?>
                                                     <tr class="align-middle">
                                                         <td><?php echo $registro->getId(); ?></td>
-                                                        <td><?php echo $registro->getNombre() . ' ' . $registro->getApellido(); ?></td>
+                                                        <td><?php echo $registro->getNombre() . ' ' . $registro->getApellido(); ?>
+                                                        </td>
                                                         <td>
-                                                            <span class="badge text-bg-<?php echo $registro->isActive() == 1 ? 'success' : 'danger' ?>"><?php echo $registro->isActive() == 1 ? 'Activo' : 'Inactivo' ?></span>
+                                                            <span
+                                                                class="badge text-bg-<?php echo $registro->isActive() == 1 ? 'success' : 'danger' ?>"><?php echo $registro->isActive() == 1 ? 'Activo' : 'Inactivo' ?></span>
                                                         </td>
                                                         <td>
                                                             <div class="btn-group">
@@ -195,31 +198,35 @@ $data = $modelo->getAll();
                                                                     <li>
                                                                         <a class="dropdown-item" href="#">Editar</a>
                                                                     </li>
-                                                                    <?php if($registro->isActive() == 1 ) { ?>
-                                                                    <li>
-                                                                        <form action="./powerOFF/" method="post">
-                                                                            <input type="text" class="d-none" name="id" value="<?php echo $registro->getId() ?>">
-                                                                            <button type="submit" class="dropdown-item">Apagar</button>
-                                                                        </form>
-                                                                        <!-- <a class="dropdown-item" href="./powerOFF/">Apagar LINK</a> -->
-                                                                    </li>                                                                    
+                                                                    <?php if ($registro->isActive() == 1) { ?>
+                                                                        <li>
+                                                                            <form action="./powerOFF/" method="post">
+                                                                                <input type="text" class="d-none" name="id"
+                                                                                    value="<?php echo $registro->getId() ?>">
+                                                                                <button type="submit"
+                                                                                    class="dropdown-item">Apagar</button>
+                                                                            </form>
+                                                                            <!-- <a class="dropdown-item" href="./powerOFF/">Apagar LINK</a> -->
+                                                                        </li>
                                                                     <?php } ?>
-                                                                    <?php if($registro->isActive() == 0 ) { ?>
-                                                                    <li>
-                                                                        <form action="./powerON/" method="post">
-                                                                            <input type="text" class="d-none" name="id" value="<?php echo $registro->getId() ?>">
-                                                                            <button type="submit" class="dropdown-item">Encender</button>
-                                                                        </form>
-                                                                        <!-- <a class="dropdown-item" href="powerON">Encender LINK</a> -->
-                                                                    </li>
+                                                                    <?php if ($registro->isActive() == 0) { ?>
+                                                                        <li>
+                                                                            <form action="./powerON/" method="post">
+                                                                                <input type="text" class="d-none" name="id"
+                                                                                    value="<?php echo $registro->getId() ?>">
+                                                                                <button type="submit"
+                                                                                    class="dropdown-item">Encender</button>
+                                                                            </form>
+                                                                            <!-- <a class="dropdown-item" href="powerON">Encender LINK</a> -->
+                                                                        </li>
                                                                     <?php } ?>
                                                                 </ul>
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                <?php
-                                                    $num++; 
-                                                } ?>                           
+                                                    <?php
+                                                    $num++;
+                                                } ?>
                                             </tbody>
                                         <?php } else { ?>
                                             <tbody>
@@ -251,7 +258,7 @@ $data = $modelo->getAll();
                         <form action="./add/" method="post">
                             <div class="modal-body">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="">
                                     <label for="floatingInput">Usuario (Utilice el Email)</label>
                                 </div>
                                 <div class="form-floating mb-3">
